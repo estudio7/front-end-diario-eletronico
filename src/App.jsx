@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Container } from 'react-bootstrap';
+import './App.css';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

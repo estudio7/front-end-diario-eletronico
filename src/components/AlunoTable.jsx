@@ -1,5 +1,3 @@
-// src/components/AlunoTable.jsx
-
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { Table, Button } from 'react-bootstrap';
@@ -12,6 +10,8 @@ import api from '../services/api';
 export const AlunoTable = ({ onEdit }) => {
   const { data, refetch } = useQuery('alunos', async () => {
     const response = await api.get('/aluno');
+    console.log(response.data);  // Adicione esta linha
+
     return response.data;
   });
 
@@ -19,10 +19,12 @@ export const AlunoTable = ({ onEdit }) => {
   const [alunoToDelete, setAlunoToDelete] = useState(null);
 
   const handleEdit = (aluno) => {
+    console.log(aluno);
     setAlunoToEdit(aluno);
   };
 
   const handleDelete = (aluno) => {
+    console.log(aluno);
     setAlunoToDelete(aluno);
   };
 
@@ -40,7 +42,8 @@ export const AlunoTable = ({ onEdit }) => {
 
   return (
     <div>
-      <Table striped bordered hover>
+      <h2>Alunos Cadastrados</h2>
+      <Table  bordered >
         <thead>
           <tr>
             <th>#</th>

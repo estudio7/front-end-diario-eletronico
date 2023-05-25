@@ -7,7 +7,7 @@ import api from '../services/api';
 
 export const AlunoDeleteModal = ({ aluno, show, handleClose, onSuccess }) => {
   const mutation = useMutation(async () => {
-    const response = await api.delete(`/aluno/${aluno.id}`);
+    const response = await api.delete(`/aluno/${aluno._id}`);
     return response.data;
   }, {
     onSuccess: () => {

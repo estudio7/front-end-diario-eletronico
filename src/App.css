@@ -5,18 +5,13 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #1E1E1E;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
+
 
 @keyframes logo-spin {
   from {
@@ -39,4 +34,12 @@
 
 .read-the-docs {
   color: #888;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: left;
+}
+h2 {
+  text-align: left;
 }
