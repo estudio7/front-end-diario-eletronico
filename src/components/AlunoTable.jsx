@@ -42,7 +42,10 @@ export const AlunoTable = ({ onEdit }) => {
 
   return (
     <div>
-      <h2>Alunos Cadastrados</h2>
+      <h2>Alunos Cadastrados</h2>  
+
+      <p>Total de alunos: {data?.length}</p>          
+
       <Table  bordered >
         <thead>
           <tr>
@@ -55,9 +58,9 @@ export const AlunoTable = ({ onEdit }) => {
           </tr>
         </thead>
         <tbody>
-          {data?.map((aluno) => (
+          {data?.map((aluno, index) => (
             <tr key={aluno.id}>
-              <td>{aluno.id}</td>
+              <td>{index + 1}</td>
               <td>{aluno.nome}</td>
               <td>{aluno.matricula}</td>
               <td>{aluno.curso}</td>

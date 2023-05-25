@@ -33,6 +33,7 @@ h1, h2, table.table.table-bordered {
   text-align: left;
   color: var(--white-color);
 }
+p {color: var(--white-color);}
 
 h1 {
   line-height: 1.1;
